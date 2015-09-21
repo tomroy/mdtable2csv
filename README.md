@@ -1,6 +1,4 @@
-# Convert .md file to .csv
-
----
+# mdtable2csv `(Convert .md file to .csv)`
 
 This is a command-line server application written in Python that uses the GitHub markdown API to convert a table in .md to .csv. The styles also come directly from GitHub, so you'll know exactly how it will appear.
 
