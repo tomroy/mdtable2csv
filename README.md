@@ -8,7 +8,7 @@ This is a command-line server application written in Python that uses the GitHub
 
 I wanted to convert a table in .md to .csv, but I can't find any tools for it. So I just wrote one.
 
-## Installation
+<!-- ## Installation
 
 ### [install Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup)
 
@@ -16,7 +16,7 @@ I wanted to convert a table in .md to .csv, but I can't find any tools for it. S
 $ easy_install beautifulsoup4
   or
 $ pip install beautifulsoup4
-```
+``` -->
 
 ## Usage
 To convert \<filename\>.md to \<filename\>.csv : 
