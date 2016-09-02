@@ -1,6 +1,6 @@
 # mdtable2csv (Convert `.md` file to `.csv`)
 
-This is a command-line server application written in Python that uses the GitHub markdown API to convert a table in `.md` to `.csv`. The styles also come directly from GitHub, so you'll know exactly how it will appear.
+This is a command-line application written in Python that uses the GitHub markdown API to convert a table in `.md` to `.csv`. The styles also come directly from GitHub, so you'll know exactly how it will appear.
 
 ## Motivation
 
@@ -27,13 +27,13 @@ $ pip install beautifulsoup4
 ```
 
 ## Usage
-To convert `\<filename\>.md` to `\<filename\>.csv` : 
+Use the following command to convert `<filename>.md` to `<filename>.csv` : 
 
 ```
 $ mdtable2csv <filename>.md
 ```
 
-You will see a `\<filename\>.csv` in the same folder.
+And then you will see a `<filename>.csv` in the same folder.
 
 ## Examples
 
