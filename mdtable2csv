@@ -100,7 +100,10 @@ for row in rows[1:]:
 	write_td_to_file = ''
 	tds = row.find_all('td')
 	for td in tds:
-		write_td_to_file += (td.string+',')
+            if td.string is not None:
+                write_td_to_file += (td.string+',')
+            else:
+                write_td_to_file += (' '+',')
 	write_td_to_file = write_td_to_file[:-1]
 	# print write_td_to_file
 	f.write(write_td_to_file)
