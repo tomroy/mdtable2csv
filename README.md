@@ -26,6 +26,11 @@ $ easy_install beautifulsoup4
 $ pip install beautifulsoup4
 ```
 
+### install flask
+
+```
+$ pip install flask
+```
 ## Usage
 Use the following command to convert `<filename>.md` to `<filename>.csv` : 
 
