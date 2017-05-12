@@ -93,7 +93,7 @@ for th in ths:
         write_th_to_file += (' ' + ',')
 write_th_to_file = write_th_to_file[:-1]
 # print write_th_to_file
-f.write(write_th_to_file)
+f.write(write_th_to_file.encode('utf-8'))
 f.write('\n')
 
 for row in rows[1:]:
@@ -106,7 +106,7 @@ for row in rows[1:]:
                 write_td_to_file += (' '+',')
 	write_td_to_file = write_td_to_file[:-1]
 	# print write_td_to_file
-	f.write(write_td_to_file)
+	f.write(write_td_to_file.encode('utf-8'))
 	f.write('\n')
 
 f.close()
