@@ -75,3 +75,6 @@ $ mdtable2csv abc.md
 2,a2,b2,c2
 3,a3,b3,c3
 ```
+
+---
+**Please give me a star if you find this tool useful, Thank you.**
