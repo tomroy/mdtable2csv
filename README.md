@@ -35,7 +35,7 @@ $ pip install flask
 Use the following command to convert `<filename>.md` to `<filename>.csv` : 
 
 ```
-$ mdtable2csv <filename>.md
+$ ./mdtable2csv <filename>.md
 ```
 
 And then you will see a `<filename>.csv` in the same folder.
