@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/bin/python3
 #coding:utf-8
 # Created by tom_th_lin on 2015/9/18.
 import sys
@@ -43,10 +43,8 @@ def render_content(text, api_url, gfm=False, context=None,
         url = '{}/markdown/raw'.format(api_url)
         data = text.encode('utf-8')
         headers = {'content-type': 'text/x-markdown; charset=UTF-8'}
-
     auth = (username, password) if username or password else None
     r = requests.post(url, headers=headers, data=data, auth=auth)
-
     # Relay HTTP errors
     if r.status_code != 200:
         try:
@@ -54,7 +52,6 @@ def render_content(text, api_url, gfm=False, context=None,
         except Exception:
             message = r.text
         abort(r.status_code, message)
-
     return r.text
 
 ###
@@ -63,21 +60,21 @@ def render_content(text, api_url, gfm=False, context=None,
 # 
 ###
 if len(sys.argv) >= 2:
-	filename = sys.argv[1]
+    filename = sys.argv[1]
 else:
-	print "please put sys.argv[1] as filename !!"
-	sys.exit()
+    print("please put sys.argv[1] as filename !!")
+    sys.exit()
 if not (filename[-2:] == 'md'):
-    print "the file format should be *.md"
+    print("the file format should be *.md")
     sys.exit()
 render_text = _read_file_or_404(filename)
-# print render_text
+# print(render_text)
 api_url = 'https://api.github.com'
 html_table = render_content(render_text, api_url, True, None, None, None)
 
 soup = BeautifulSoup(html_table, "html.parser") # parse html
 table = soup.table # get <table>...</table>
-# print table
+# print(table)
 
 f = open(filename[0:filename.find('.')] +'.csv', 'w') # open file.csv
 
@@ -92,22 +89,22 @@ for th in ths:
     else:
         write_th_to_file += (' ' + ',')
 write_th_to_file = write_th_to_file[:-1]
-# print write_th_to_file
-f.write(write_th_to_file.encode('utf-8'))
+
+f.write(write_th_to_file)
 f.write('\n')
 
 for row in rows[1:]:
-	write_td_to_file = ''
-	tds = row.find_all('td')
-	for td in tds:
+    write_td_to_file = ''
+    tds = row.find_all('td')
+    for td in tds:
             if td.string is not None:
                 write_td_to_file += (td.string+',')
             else:
                 write_td_to_file += (' '+',')
-	write_td_to_file = write_td_to_file[:-1]
-	# print write_td_to_file
-	f.write(write_td_to_file.encode('utf-8'))
-	f.write('\n')
+    write_td_to_file = write_td_to_file[:-1]
+    # print(write_td_to_file)
+    f.write(write_td_to_file)
+    f.write('\n')
 
 f.close()
-print "convertion successfully done"
+print("convertion successfully done")
