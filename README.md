@@ -6,33 +6,23 @@ This is a command-line application written in Python that uses the GitHub markdo
 
 I wanted to convert a table in `.md` to `.csv`, but I can't find any tools on the internet for this purpose. So I thought I can just wrote one.
 
-<!-- ## Installation
-
-### [install Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup)
+## Install requirements
 
 ```
-$ easy_install beautifulsoup4
-  or
-$ pip install beautifulsoup4
-``` -->
-
-## Prerequisites
-
-### [install Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup)
-
-```
-$ easy_install beautifulsoup4
-  or
-$ pip install beautifulsoup4
+$ pip install -r requirements.txt
 ```
 
-### install flask
+**_OR_**
 
 ```
-$ pip install flask
+$ pip install beautifulsoup4 flask
 ```
+
+If you have any issues installing Beautiful Soup, visit [this page](http://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup).
+
 ## Usage
-Use the following command to convert `<filename>.md` to `<filename>.csv` : 
+
+Use the following command to convert `<filename>.md` to `<filename>.csv` :
 
 ```
 $ ./mdtable2csv <filename>.md
@@ -43,8 +33,9 @@ And then you will see a `<filename>.csv` in the same folder.
 ## Examples
 
 ### table.md
+
 ```markdown
-# table.md : 
+# table.md :
 First Header  | Second Header
 ------------- | -------------
 Content Cell  | Content Cell
@@ -52,13 +43,16 @@ Content Cell  | Content Cell
 
 $ mdtable2csv table.md
 
-# table.csv : 
+# table.csv :
 First Header,Second Header
 Content Cell,Content Cell
 Content Cell,Content Cell
 ```
----
+
+--------------------------------------------------------------------------------
+
 ### abc.md
+
 ```markdown
 # abc.md :
 |   |  a | b  | c  |
@@ -76,5 +70,6 @@ $ mdtable2csv abc.md
 3,a3,b3,c3
 ```
 
----
+--------------------------------------------------------------------------------
+
 **Please give me a star if you find this tool useful, Thank you.**
