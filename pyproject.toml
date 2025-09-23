@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.18.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mdtable2csv"
+version = "0.1.0"
+description = "Convert Markdown tables to CSV"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Samuel EF. Tinnerholm", email = "samuel.tinnerholm@gmail.com" }
+]
+dependencies = [
+  "beautifulsoup4",
+  "requests",
+  "flask"
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent"
+]
+
+[project.scripts]
+mdtable2csv = "mdtable2csv.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/samueltinnerholm/mdtable2csv"
+Repository = "https://github.com/samueltinnerholm/mdtable2csv"
+Issues = "https://github.com/samueltinnerholm/mdtable2csv/issues"
+
+
