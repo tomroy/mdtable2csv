@@ -4,7 +4,9 @@ Convert markdown tables to csvs!
 
 ## Install requirements
 
-pip install mdtable2csv
+```
+pip install mdtable2csv==0.1.0
+```
 
 ## Usage
 
